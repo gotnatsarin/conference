@@ -51,21 +51,5 @@
             </div>
       </div>
 
-      <div class="m-4">
-  	    <p><strong>Note:</strong> The toast message will not hide automatically as autohide option is set to false.</p>
-	      <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
-    
-        <div class="toast" data-bs-animation="true" id="myToast" data-bs-delay="5000" data-bs-autohide="true">
-          <div class="toast-header">
-          <strong class="me-auto"><i class="bi-gift-fill"></i> We miss you!</strong>
-          <small>10 mins ago</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body">
-          It's been a long time since you visited us. We've something special for you.
-        </div>
-      </div>
-    </div>
-
   </body>
 </html>

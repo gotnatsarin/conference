@@ -39,10 +39,10 @@
                 <h2>เข้าสู่ระบบ</h2>
               </div>
                 <br/>
-                <form action="#" style="text-align: left;">
+                <form action="javascript:void(0);" style="text-align: left;">
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-user"></i></span>
-                    <input id="username" type="text" class="form-control rounded"  placeholder="Username" aria-label="username" aria-describedby="username-addon" />
+                    <input id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username" aria-describedby="username-addon"/>
                   </div>
                   <div class="text-center" ><label style="color: red;font-size: 13px;" id="username_error_message"></label></div>
                   <div class="input-group">
@@ -55,7 +55,7 @@
                   <div>
                 </form>
                 <br/>
-                <figcaption class="figure-caption text-center"><a href="forgot_pass.php">ลืมรหัสผ่าน</a> || <a href="register.php">สมัครสมาชิก</a></figcaption>
+                <figcaption class="figure-caption text-center"><a href="forgot_pass.php">ลืมรหัสผ่าน</a> || <a href="form_register.php">สมัครสมาชิก</a></figcaption>
               </div>          
         </div>
 

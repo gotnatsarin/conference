@@ -11,7 +11,7 @@
       />
       <small class=" text-light">WE MEET Booking</small>
     </a>
-    <h5 class=" text-light">ผู้ใช้งาน</h5>
+    <h5 class=" text-light">ยินดีต้อนรับคุณ : <?php echo $s_login_username; ?></h5>
   </div>
 </nav>
 
@@ -46,7 +46,7 @@
               <a class="nav-link  text-light" aria-current="page" href="#">พิมพ์ผลการจอง</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-light" aria-current="page" href="#">แก้ไขหน้าหลัก</a>
+              <a class="nav-link  text-light" aria-current="page" href="form_manage_meeting_room.php">จัดการห้องประชุม</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="#">แก้ไข/อนุมัติการจอง</a>

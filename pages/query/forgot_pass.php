@@ -1,6 +1,5 @@
 <?php 
-$email = $_POST['email'];
-$password =$_POST['password'];
+$email = $_GET['email'];
 
 require('connect.php');
 if(isset($email)){
@@ -9,9 +8,11 @@ if(isset($email)){
 
   $row = mysqli_fetch_array($result ,MYSQLI_ASSOC);
   if($row['email']==$email){
-    echo "true";
+    $data = json_encode(array("status"=>'true',"id"=>$row['id']));
+    echo $data;
   }else{
-    echo "false";
+    $data = json_encode(array("status"=>'false',"id"=>null));
+    echo $data;
   }
 }
 ?>

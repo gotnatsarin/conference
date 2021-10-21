@@ -3,7 +3,7 @@ require('connect.php');
 
 $username = mysqli_real_escape_string($conn,$_POST['username']);
 $password = mysqli_real_escape_string($conn,$_POST['password']);
-$key = "";
+$key = "newDEVsince2021";
 $hash_login_password = hash_hmac('sha256',$password,$key);
 
 $sql = "SELECT * FROM user WHERE username=? AND password=?";
