@@ -12,6 +12,7 @@ $session_login_id = $_SESSION['login_id'];
               $row_user = mysqli_fetch_array($result_user,MYSQLI_ASSOC);
               $s_login_username = $row_user['username'];
               $s_login_fullname = $row_user['full_name'];
+              $s_login_isadmin = $row_user['role'];
           }
           mysqli_close($conn); 
 ?>

@@ -6,7 +6,7 @@ $(document).ready(function() {
             $('#username_error_message').html('ชื่อผู้ใช้ต้องมีตัวอักษร (a-z) ตัวเลข (0-9)')
             $(this).addClass('border border-danger')
         } else if ($(this).val() == "") {
-            $('#username_error_message').html('This field is require')
+            $('#username_error_message').html('กรุณาระบุข้อมูลให้ครบ')
             $(this).addClass('border border-danger')
         } else {
             $('#username_error_message').html('')
@@ -18,7 +18,7 @@ $(document).ready(function() {
     $("#password").keyup(function() {
         if ($(this).val() == "") {
             $(this).addClass('border border-danger')
-            $('#password_error_message').html('This field is require')
+            $('#password_error_message').html('กรุณาระบุข้อมูลให้ครบ')
         } else {
             $('#password_error_message').html('')
             $(this).removeClass('border border-danger')
@@ -31,11 +31,11 @@ $(document).ready(function() {
         if (username == "" || password == "") {
             if (username == "") {
                 $('#username').addClass('border border-danger')
-                $('#username_error_message').html('This field is require')
+                $('#username_error_message').html('กรุณาระบุข้อมูลให้ครบ')
             }
             if (password == "") {
                 $('#password').addClass('border border-danger')
-                $('#password_error_message').html('This field is require')
+                $('#password_error_message').html('กรุณาระบุข้อมูลให้ครบ')
             }
         } else {
             $.ajax({

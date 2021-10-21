@@ -1,29 +1,29 @@
 <?php require('query/checklogin.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php require('mdb_js.php'); ?>
   <?php require('mdb_css.php'); ?>
-  <title>เพิ่มห้องประชุม</title>
+  <title>จัดการห้องประชุม</title>
 </head>
 <body>
     <?php require('components/navbar.php'); ?>
       <br/>
       <div class="container">
         <div>
-          <h5>เพิ่มห้องประชุม</h5>
+          <h5>แก้ไขห้องประชุม</h5>
         </div>
           <div>
-            <form >
+            <form>
               <div class="row">
                 <div class="col-2">
                 </div>
                 <div class="card col-8 border">
                   <div class="card-header text-center">
-                    เพิ่มห้องประชุม
+                    แก้ไขห้องประชุม
                   </div>
                   <div class="card-body">
                     <div class="card-text text-center">

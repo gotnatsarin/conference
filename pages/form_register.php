@@ -13,12 +13,20 @@
   <body>
       <!-- background -->
       <div class="bg-image" style="background-image: url('https://www.img.in.th/images/a7f91e28a2cb2a58f9900e77b6decea0.jpg'); height: 100vh">
-      <div class="toast bg-danger text-white" data-bs-animation="true" id="myToast" data-bs-delay="2000" data-bs-autohide="true">
+      <div class="toast bg-danger text-white" data-bs-animation="true" id="myToast_reg" data-bs-delay="2000" data-bs-autohide="true">
         <div class="toast-header bg-danger text-white">
           <strong class="me-auto"><i class="bi-gift-fill"></i>ผิดพลาด</strong>
         </div>
         <div class="toast-body">
-          อีเมลซ้ำ
+         ชื่อผู้ใช้ รหัสพนักงาน หรืออีเมลซ้ำ กรุณาตรวจสอบอีกครั้ง
+        </div>
+      </div>
+      <div class="toast bg-success text-white" data-bs-animation="true" id="myToast_success" data-bs-delay="2000" data-bs-autohide="true">
+        <div class="toast-header bg-success text-white">
+          <strong class="me-auto"><i class="bi-gift-fill"></i>สำเร็จ</strong>
+        </div>
+        <div class="toast-body">
+        สมัครผู้ใช้เสร็จสิ้น
         </div>
       </div>
         </br></br></br>
@@ -43,7 +51,7 @@
                     <!-- ทดลอง -->
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-user fa-xs"></i></span>
-                    <input name="username" id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username">
+                    <input name="username" id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username" >
                   </div>
 
                   <div class="text-center"><label style="color: red;font-size: 12px;" id="username_error_message"></label></div>
@@ -78,14 +86,14 @@
 
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-envelope fa-xs"></i></span>
-                    <input name="email" id="email" type="email" class="form-control rounded" placeholder="Email" aria-label="email"/>
+                    <input name="email" id="email" type="text" class="form-control rounded" placeholder="Email" aria-label="email"/>
                   </div>
 
                   <div class="text-center"><label style="color: red;font-size: 12px;" id="email_error_message"></label></div>
 
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-phone-square-alt fa-xs"></i></span>
-                    <input name="Phone" id="Phone" type="text" class="form-control rounded" placeholder="เบอร์โทรศัพท์" aria-label="phone"/>
+                    <input name="Phone" id="Phone" type="text" class="form-control rounded" placeholder="Phone Number" aria-label="phone" maxlength="10"/>
                   </div>
 
                   <div class="text-center"><label style="color: red;font-size: 12px;" id="Phone_error_message"></label></div>

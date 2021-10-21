@@ -14,7 +14,7 @@
       <br/>
       <div class="container">
         <div>
-          <p>แสดงห้องประชุม</p>
+          <h5></h5>แสดงห้องประชุม</h5>
         </div>
           <div>
             <form>
@@ -22,7 +22,7 @@
                   <a href="form_add_manage_meeting_room.php" class="btn btn-success btn-lg  mt-4"><i class="fas fa-plus">&nbsp; เพิ่มห้องประชุม</i></a>
               <div>
                 </br>
-                  <table class="table table-hover ">
+                  <table class="table table-hover border">
                     <thead>
                       <tr>
                         <th>ลำดับที่</th>
@@ -37,22 +37,11 @@
                       <tr>
                         <th scope="row">1</th>
                         <td class="text-center">#</td>
-                        <td class="text-center">พิกุล1</td>
-                        <td class="text-center">อาคาร2</td>
-                        <td class="text-center">50 คน</td>
+                        <td class="text-center">ห้องประชุมกัญญารัตน์</td>
+                        <td class="text-center">อาคารกรีน</td>
+                        <td class="text-center">3 คน</td>
                         <td class="text-center">
-                          <button id="submit" type="submit" class="btn btn-warning">แก้ไข</button>&nbsp;
-                          <button id="submit" type="submit" class="btn btn-danger">ลบ</button></td>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td class="text-center">#</td>
-                        <td class="text-center">พิกุล1</td>
-                        <td class="text-center">อาคาร2</td>
-                        <td class="text-center">50 คน</td>
-                        <td class="text-center">
-                          <button id="submit" type="submit" class="btn btn-warning">แก้ไข</button>&nbsp;
+                          <a href="form_edit_manage_meeting_room.php" class="btn btn-warning">แก้ไข</a>&nbsp;
                           <button id="submit" type="submit" class="btn btn-danger">ลบ</button></td>
                         </td>
                       </tr>
@@ -63,7 +52,7 @@
                         <td class="text-center">อาคารกรีน</td>
                         <td class="text-center">3 คน</td>
                         <td class="text-center">
-                          <button id="submit" type="submit" class="btn btn-warning">แก้ไข</button>&nbsp;
+                          <a href="form_edit_manage_meeting_room.php" class="btn btn-warning">แก้ไข</a>&nbsp;
                           <button id="submit" type="submit" class="btn btn-danger">ลบ</button></td>
                         </td>
                       </tr>

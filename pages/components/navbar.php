@@ -14,7 +14,6 @@
     <h5 class=" text-light">ยินดีต้อนรับคุณ : <?php echo $s_login_username; ?></h5>
   </div>
 </nav>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <!-- Container wrapper -->
   <div class="container-fluid">
@@ -45,6 +44,9 @@
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="#">พิมพ์ผลการจอง</a>
             </li>
+            <?php
+             if($s_login_isadmin==0){
+            ?>
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="form_manage_meeting_room.php">จัดการห้องประชุม</a>
             </li>
@@ -54,6 +56,9 @@
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="#">แก้ไขผลการจอง</a>
             </li>
+            <?php 
+             }
+            ?>
             <li class="nav-item">
               <a class="nav-link actve text-light" aria-current="page" href="query/logout.php">ออกจากระบบ</a>
             </li>
