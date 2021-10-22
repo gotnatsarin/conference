@@ -17,6 +17,14 @@
     <title>ระบบจองห้องประชุม : Reserve Conference System</title>
   </head>
   <body>
+        <div class="toast bg-success text-white" data-bs-animation="true" id="changed_success" data-bs-delay="2000" data-bs-autohide="true">
+          <div class="toast-header bg-success text-white">
+          <strong class="me-auto"><i class="bi-gift-fill"></i>สำเร็จ</strong>
+          </div>
+        <div class="toast-body">
+        เปลี่ยนรหัสผ่านเสร็จสิ้น กำลังนำท่านไปหน้าเข้าสู่ระบบ
+          </div>
+        </div>
       <!-- background -->
       <div class="bg-image" style="background-image: url('https://www.img.in.th/images/a7f91e28a2cb2a58f9900e77b6decea0.jpg'); height: 100vh">
       
