@@ -75,7 +75,12 @@ $(document).ready(function() {
                     password: $("#password").val(),
                 },
                 success: function(data) {
-                    window.location.href = 'index.php';
+                    $("#myModal").hide()
+                    $("#changed_success").toast("show")
+                    setTimeout(
+                        function() {
+                            window.location.href = 'index.php';
+                        }, 2000)
                 }
             });
         }

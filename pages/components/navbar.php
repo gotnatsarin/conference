@@ -39,7 +39,7 @@
               <a class="nav-link  text-light" aria-current="page" href="main.php">หน้าหลัก</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-light" aria-current="page" href="#">จองห้องประชุม</a>
+              <a class="nav-link  text-light" aria-current="page" href="form_building_meeting_room.php">จองห้องประชุม</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="#">พิมพ์ผลการจอง</a>

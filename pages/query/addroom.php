@@ -13,6 +13,7 @@ $result = mysqli_query($conn,$query);
 if($result){
   echo "true";
 }else{
+  //ถ้าชื่อห้องประชุมซ้ำ จะตอบกลับไปว่า false
   echo "false";
 }
 ?>

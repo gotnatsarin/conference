@@ -33,7 +33,11 @@ $(document).ready(function() {
                 },
                 success: function(data) {
                     if (data == "true") {
-                        alert('เรียบร้อย')
+                        $("#myToast_success").toast("show");
+                        setTimeout(
+                            function() {
+                                window.location.href = 'form_manage_meeting_room.php';
+                            }, 2000);
                     } else {
                         $("#myToast").toast("show");
                     }

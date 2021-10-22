@@ -99,30 +99,33 @@ $(document).ready(function() {
                 $('#password_error_message').html(message);
             }
             if (fullname == "") {
-                $('#fullname').addClass('border border-danger')
-                $('#fullname_error_message').html(message)
+                $('#fullname').addClass('border border-danger');
+                $('#fullname_error_message').html(message);
             }
             if (idEmployee == "") {
-                $('#idEmployee').addClass('border border-danger')
-                $('#idEmployee_error_message').html(message)
+                $('#idEmployee').addClass('border border-danger');
+                $('#idEmployee_error_message').html(message);
             }
             if (department == "") {
-                $('#department').addClass('border border-danger')
-                $('#department_error_message').html(message)
+                $('#department').addClass('border border-danger');
+                $('#department_error_message').html(message);
             }
             if (email == "") {
-                $('#email').addClass('border border-danger')
-                $('#email_error_message').html(message)
-            } else if (!pattern.test($('#email').val())) {
-                $('#email').addClass('border border-danger')
-                $('#email_error_message').html('อีเมลไม่ถูกต้อง')
+                $('#email').addClass('border border-danger');
+                $('#email_error_message').html(message);
             }
             if (Phone == "") {
-                $('#Phone').addClass('border border-danger')
-                $('#Phone_error_message').html(message)
-            } else if (Phone.length != 10) {
-                $('#Phone').addClass('border border-danger')
-                $('#Phone_error_message').html('กรุณากรอกหมายเลขโทรศัพท์ให้ครบ')
+                $('#Phone').addClass('border border-danger');
+                $('#Phone_error_message').html(message);
+            }
+        } else if (Phone.length != 10 || !pattern.test($('#email').val())) {
+            if (Phone.length != 10) {
+                $('#Phone').addClass('border border-danger');
+                $('#Phone_error_message').html('กรุณากรอกหมายเลขโทรศัพท์ให้ครบ');
+            }
+            if (!pattern.test($('#email').val())) {
+                $('#email').addClass('border border-danger');
+                $('#email_error_message').html('อีเมลไม่ถูกต้อง');
             }
         } else {
             $.ajax({
@@ -152,4 +155,3 @@ $(document).ready(function() {
         }
     });
 });
-eno

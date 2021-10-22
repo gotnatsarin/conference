@@ -13,6 +13,24 @@
     <?php require('components/navbar.php'); ?>
       <br/>
       <div class="container">
+        <div class="toast bg-danger text-white" data-bs-animation="true" id="myToast" data-bs-delay="2000" data-bs-autohide="true">
+          <div class="toast-header bg-danger text-white">
+            <strong class="me-auto"><i class="bi-gift-fill"></i>ผิดพลาด</strong>
+          </div>
+          <div class="toast-body">
+            ชื่อห้องประชุมที่ระบุ ถูกใช้งานแล้ว กรุณาตรวจสอบอีกครั้ง
+          </div>
+        </div>
+
+        <div class="toast bg-success text-white" data-bs-animation="true" id="myToast_success" data-bs-delay="2000" data-bs-autohide="true">
+            <div class="toast-header bg-success text-white">
+              <strong class="me-auto"><i class="bi-gift-fill"></i>สำเร็จ</strong>
+            </div>
+          <div class="toast-body">
+            เพิ่มห้องประชุมเสร็จสิ้น
+          </div>
+        </div>
+
         <div>
           <h5>เพิ่มห้องประชุม</h5>
         </div>
@@ -60,6 +78,6 @@
             </form>
         </div>
       </div>
-</body>
+    </body>
 <script src="ajax/add_room.js"></script>
 </html>
