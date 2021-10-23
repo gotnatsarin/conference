@@ -50,12 +50,6 @@
             <li class="nav-item">
               <a class="nav-link  text-light" aria-current="page" href="form_manage_meeting_room.php">จัดการห้องประชุม</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link  text-light" aria-current="page" href="#">แก้ไข/อนุมัติการจอง</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link  text-light" aria-current="page" href="#">แก้ไขผลการจอง</a>
-            </li>
             <?php 
              }
             ?>

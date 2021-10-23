@@ -28,7 +28,7 @@
                         <th class="col-1">ลำดับที่</th>
                         <th class="text-center">รูปภาพ</th>
                         <th class="text-center">รายละเอียด</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center">จองห้อง</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -37,7 +37,7 @@
                           <td class="text-center">#</td>
                           <td class="text-center">อาคารอำนวยการ</td>
                           <td class="text-center">
-                            <a href="form_building_director.php" class="btn btn-success"> เลือก </a>
+                            <a href="form_building.php?id_building=0" class="btn btn-success btn-lg">เลือก</a>
                           </td>
                       </tr>
                       <tr>
@@ -45,7 +45,7 @@
                           <td class="text-center">#</td>
                           <td class="text-center">อาคารเฉลิมพระเกียรติ</td>
                           <td class="text-center">
-                            <a href="form_building_director.php" class="btn btn-success">เลือก</a>
+                            <a href="form_building.php?id_building=1" class="btn btn-success btn-lg">เลือก</a>
                           </td>
                       </tr>
                     </tbody>

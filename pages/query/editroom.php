@@ -10,4 +10,5 @@ $room_img = $_POST['room_img'];
 
 $query = "UPDATE `room` SET `room_name`='$room_name',`room_place`='$room_place',`room_capacity`='$room_capacity',`room_desc`='$room_desc',`room_img`='$room_img' WHERE room_id = '$room_id'";
 $result = mysqli_query($conn,$query);
+
 ?>

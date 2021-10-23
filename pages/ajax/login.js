@@ -18,6 +18,8 @@ $(document).ready(function() {
     $("#password").keyup(function() {
         if ($(this).val() == "") {
             $(this).addClass('border border-danger')
+            3
+
             $('#password_error_message').html('กรุณาระบุข้อมูลให้ครบ')
         } else {
             $('#password_error_message').html('')

@@ -50,11 +50,15 @@
                     <div class="text-center" >
                       <label style="color: red;font-size: 13px;" id="roomname_error_message"></label>
                     </div>
-                    <div class="card-text text-center">
-                      <input type="text" class="form-control" id="room_place" placeholder="ชื่ออาคาร" aria-label="name" aria-describedby="email-addon">
+                    <div class="text-center">
+                      <select id="room_building" class="form-select" aria-label="Default select example">
+                        <option selected>ชื่ออาคาร</option>
+                        <option value="0">อาคารอำนวยการ</option>
+                        <option value="1">อาคารเฉลิมพระเกียรติ</option>
+                      </select>
                     </div>
                     <div class="text-center" >
-                      <label style="color: red;font-size: 13px;" id="roomplace_error_message"></label>
+                      <label style="color: red;font-size: 13px;" id="roombuilding_error_message"></label>
                     </div>
                     <div class="card-text text-center">
                       <input type="text" class="form-control" id="room_capacity" placeholder="ความจุ/จำนวน" aria-label="name" aria-describedby="email-addon">
