@@ -1,18 +1,38 @@
 $(document).ready(function() {
     var number = /^(0|[1-9][0-9]*)$/
+    var room_id = $('#room_id').val();
+    var user_id = $('#user_id').val();
+    var room_place = null;
+    var user_fullname = null;
+    var room_name = null;
 
-    $("#booking_capacity").keyup(function() {
-        if ($(this).val() == "") {
-            $(this).addClass('border border-danger');
-            $('#capacity_error').html('กรุณาระบุข้อมูลให้ครบ');
-        } else if (!number.test($(this).val())) {
-            $(this).addClass('border border-danger');
-            $('#capacity_error').html('กรุณากรอกเฉพาะตัวเลข');
-        } else {
-            $('#capacity_error').html('');
-            $(this).removeClass('border border-danger');
+    $.ajax({
+        type: 'GET',
+        url: 'query/showformbooking.php',
+        data: {
+            room_id: room_id,
+            user_id: user_id,
+        },
+        success: function(data) {
+            if (data == "null") {
+                $('.container').remove();
+                $.get('components/404_notfound.php', function(data) {
+                    $('body').append(data);
+                });
+            } else {
+                var new_datas = JSON.parse(data).roomAndUserObj
+                room_place = new_datas[0].room_place
+                console.log(room_place)
+                $('#room_name').text(new_datas[0].room_name)
+                room_name = $('#room_name').text()
+                $('#full_name').text(new_datas[0].full_name)
+                user_fullname = $('#full_name').text()
+                $('#dep_name').text(new_datas[0].dep_name)
+                $('#phone').text(new_datas[0].phone)
+            }
         }
     });
+
 
     $("#topic").keyup(function() {
         if ($(this).val() == "") {
@@ -54,18 +74,48 @@ $(document).ready(function() {
         }
     });
 
-    $('#submitbooking').click(function() {
-        var booking_capacity = $('#booking_capacity').val();
+    $('#confirm').click(function() {
+        $('#mymodal').modal('hide');
         var topic = $('#topic').val();
         var usefor = $('#book_for').val();
         var starttime = $('#start_time').val();
         var startdate = $('#start_date').val();
 
-        if (booking_capacity == "" || topic == "" || usefor == "" || starttime == "" || startdate == "") {
-            if (booking_capacity == "") {
-                $('#booking_capacity').addClass('border border-danger');
-                $('#capacity_error').html('กรุณาระบุข้อมูลให้ครบ');
+        $.ajax({
+            type: 'POST',
+            url: 'query/booking.php',
+            data: {
+                room_id: room_id,
+                user_id: user_id,
+                room_name: room_name,
+                room_place: room_place,
+                user_fullname: user_fullname,
+                period: starttime,
+                date: startdate,
+                topic: topic,
+                usefor: usefor,
+            },
+            success: function(data) {
+                if (data == "true") {
+                    $("#booked_success").toast("show");
+                    setTimeout(
+                        function() {
+                            window.location.href = 'form_booking_result.php';
+                        }, 2000)
+                } else {
+                    $("#booked_failed").toast("show");
+                }
             }
+        });
+    });
+
+    $('#submitbooking').click(function() {
+        var topic = $('#topic').val();
+        var usefor = $('#book_for').val();
+        var starttime = $('#start_time').val();
+        var startdate = $('#start_date').val();
+
+        if (topic == "" || usefor == "" || starttime == "" || startdate == "") {
             if (topic == "") {
                 $('#topic').addClass('border border-danger');
                 $('#topic_error').html('กรุณาระบุข้อมูลให้ครบ');
@@ -83,21 +133,7 @@ $(document).ready(function() {
                 $('#date_error').html('กรุณาเลือกวันที่ต้องการจอง');
             }
         } else {
-            // $.ajax({
-            //     type: 'POST',
-            //     url: 'query/login.php',
-            //     data: {
-            //         username: $("#username").val(),
-            //         password: $("#password").val(),
-            //     },
-            //     success: function(data) {
-            //         if (data == "true") {
-            //             window.location.href = 'main.php';
-            //         } else {
-            //             $("#myToast").toast("show");
-            //         }
-            //     }
-            // });
+            $('#mymodal').modal('show');
         }
     });
 });
