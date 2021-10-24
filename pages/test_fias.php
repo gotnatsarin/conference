@@ -80,7 +80,7 @@
                     <div class="col-6">
                       <div class="input-group">
                         <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
-                        <input name="password" id="password" type="password" class="form-control rounded" placeholder="Password" aria-label="password" >
+                        <input name="password" id="password" type="password" class="form-control rounded" placeholder="Password" aria-label="password">
                       </div>
                       <div class="text-center">
                         <label style="color: red;font-size: 12px;" id="password_error_message"></label>
@@ -90,7 +90,7 @@
                     <div class="col-6">
                       <div class="input-group">
                         <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
-                        <input name="confirmpass" id="confirmPassword" type="password" class="form-control rounded" placeholder="Confirm Password" aria-label="password" >
+                        <input name="confirmpass" id="confirmPassword" type="password" class="form-control rounded" placeholder="Confirm Password">
                       </div>
                       <div class="text-center">
                         <label style="color: red;font-size: 12px;" id="confirm_password_error_message"></label>
@@ -102,7 +102,7 @@
                     <div class="col-12">
                         <div class="input-group">
                           <span class="input-group-text border-0" id="search-addon"><i class="fas fa-file-signature fa-xs"></i></span>
-                          <input name="Fullname" id="Fullname" type="text" class="form-control rounded" placeholder="Full Name" aria-label="password" >
+                          <input name="Fullname" id="Fullname" type="text" class="form-control rounded" placeholder="Full Name" >
                         </div>
                         <div class="text-center">
                           <label style="color: red;font-size: 12px;" id="fullname_error_message"></label>
@@ -243,5 +243,16 @@
             </div>
       </div>
   </body>
-  <script src="ajax/form_register.js" ></script>
+  <script src="ajax/form_register.js">
+      var check = function() {
+      if (password != confirmPassword) {
+        $('#confirm_password_error_message').html('รหัสผ่านไม่ตรงกัน');
+        $('#password_error_message').html('รหัสผ่านไม่ตรงกัน');
+        } 
+      else {
+        $('#confirm_password_error_message').html('');
+        $('#password_error_message').html('');
+        }
+      };
+  </script>
 </html>

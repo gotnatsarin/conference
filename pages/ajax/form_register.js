@@ -90,13 +90,6 @@ $(document).ready(function() {
         }
     });
 
-    $('#password, #confirmPassword').on('keyup', function () {
-      if ($('#password').val() == $('#confirmPassword').val()) {
-        $('#confirm_password_error_message').html('');
-      } else 
-        $('#confirm_password_error_message').html('รหัสผ่านไม่ตรงกัน');
-    });
-
     $('#submit_reg').click(function() {
         var username = $('#username').val();
         var password = $('#password').val();
@@ -107,7 +100,15 @@ $(document).ready(function() {
         var email = $('#email').val();
         var Phone = $('#Phone').val();
 
-        if (username == "" || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
+        $('#password').focus(function() {
+          $('#password_error_message').html('');
+        });
+    
+        $('#confirmPassword').focus(function() {
+          $('#password_error_message').html('');
+        });
+
+        if (username == "" || password == "" || confirmPassword == "" || password != confirmPassword || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
             if (username == "") {
                 $('#username').addClass('border border-danger');
                 $('#username_error_message').html(message);
@@ -120,6 +121,12 @@ $(document).ready(function() {
               $('#confirmPassword').addClass('border border-danger');
               $('#confirm_password_error_message').html(message);
             }
+            if (password != confirmPassword) {
+                $('#password').val('');
+                $('#confirmPassword').val('');
+                $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+                $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+            } 
             if (fullname == "") {
                 $('#Fullname').addClass('border border-danger');
                 $('#fullname_error_message').html(message);
@@ -173,7 +180,7 @@ $(document).ready(function() {
                         $("#myToast_reg").toast("show");
                     }
                 }
-            });
+            });        
         }
     });
 });
