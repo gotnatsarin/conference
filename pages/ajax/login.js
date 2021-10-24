@@ -14,7 +14,6 @@ $(document).ready(function() {
         }
     });
 
-
     $("#password").keyup(function() {
         if ($(this).val() == "") {
             $(this).addClass('border border-danger')
@@ -57,5 +56,4 @@ $(document).ready(function() {
             });
         }
     });
-
 });

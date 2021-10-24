@@ -42,7 +42,7 @@
               <a class="nav-link  text-light" aria-current="page" href="form_building_meeting_room.php">จองห้องประชุม</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-light" aria-current="page" href="#">พิมพ์ผลการจอง</a>
+              <a class="nav-link  text-light" aria-current="page" href="form_booking_result.php">ผลการจอง</a>
             </li>
             <?php
              if($s_login_isadmin==0){

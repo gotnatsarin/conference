@@ -51,7 +51,7 @@
                   </div>
                   <div class="text-center" ><label style="color: red;font-size: 13px;" id="password_error_message"></label></div>
                   <div class="text-center">
-                    <button id="submit" type="submit" class="btn btn-success btn-lg  mt-4">เข้าสู่ระบบ</button>
+                    <button id="submit" type="submit" class="btn btn-success btn-lg mt-4">เข้าสู่ระบบ</button>
                   <div>
                 </form>
                 <br/>

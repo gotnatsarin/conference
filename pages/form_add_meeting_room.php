@@ -70,7 +70,9 @@
                       <textarea type="text" class="form-control" id="room_desc" placeholder="รายละเอียดเพิ่มเติม" aria-label="name" aria-describedby="email-addon"></textarea>
                     </div>
                     <div class="card-text text-center">
-                      <input type="file" class="form-control" id="room_img" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
+                      <form id="file">
+                      <input type="file" class="form-control" name="room_img" id="room_img" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
+                      </form>
                     </div>
                     <div class="text-start mb-3">
                       <a href="form_manage_meeting_room.php" class="btn btn-danger btn-lg  mt-4">ย้อนกลับ</a>

@@ -27,6 +27,7 @@ body,
     background-color: rgb(255, 255, 255, 0.8);
 }
 
+
 /* .toast{
   position: absolute; 
   top: 10px; 
@@ -34,10 +35,9 @@ body,
 } */
 
 .toast {
-  top: 10px;
-  left: 50%;
-  position: fixed;
-  transform: translate(-50%, 0px);
-  z-index: 9999;
+    top: 10px;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
 }
-

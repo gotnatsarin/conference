@@ -27,7 +27,17 @@ $(document).ready(function() {
         }
     });
 
-    $('#fullname').keyup(function() {
+    $('#confirmPassword').keyup(function() {
+      if ($(this).val() == "") {
+          $(this).addClass('border border-danger')
+          $('#confirm_password_error_message').html(message)
+      } else {
+          $('#confirm_password_error_message').html('')
+          $(this).removeClass('border border-danger')
+      }
+  });
+
+    $('#Fullname').keyup(function() {
         if ($(this).val() == "") {
             $(this).addClass('border border-danger')
             $('#fullname_error_message').html(message)
@@ -80,16 +90,24 @@ $(document).ready(function() {
         }
     });
 
+    $('#password, #confirmPassword').on('keyup', function () {
+      if ($('#password').val() == $('#confirmPassword').val()) {
+        $('#confirm_password_error_message').html('');
+      } else 
+        $('#confirm_password_error_message').html('รหัสผ่านไม่ตรงกัน');
+    });
+
     $('#submit_reg').click(function() {
         var username = $('#username').val();
         var password = $('#password').val();
-        var fullname = $('#fullname').val();
+        var confirmPassword = $('#confirmPassword').val();
+        var fullname = $('#Fullname').val();
         var idEmployee = $('#idEmployee').val();
         var department = $('#department').val();
         var email = $('#email').val();
         var Phone = $('#Phone').val();
 
-        if (username == "" || password == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
+        if (username == "" || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
             if (username == "") {
                 $('#username').addClass('border border-danger');
                 $('#username_error_message').html(message);
@@ -98,8 +116,12 @@ $(document).ready(function() {
                 $('#password').addClass('border border-danger');
                 $('#password_error_message').html(message);
             }
+            if (confirmPassword == "") {
+              $('#confirmPassword').addClass('border border-danger');
+              $('#confirm_password_error_message').html(message);
+            }
             if (fullname == "") {
-                $('#fullname').addClass('border border-danger');
+                $('#Fullname').addClass('border border-danger');
                 $('#fullname_error_message').html(message);
             }
             if (idEmployee == "") {

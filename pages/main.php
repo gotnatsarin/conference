@@ -27,7 +27,33 @@
                     <?php require('components/menu.php'); ?>
                   </div>
                   <div class="col-9">
-                    test <?php require('components/calendar.php'); ?>
+                    <div class="card card-body border rounded">
+                      <div>
+                        <form>
+                          <table class="table table-hover border">
+                            <thead>
+                              <tr>
+                                <th class="col-1">ลำดับที่</th>
+                                <th class="text-center">วันที่</th>
+                                <th class="text-center">เวลา</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                  <td class="text-center">2021-10-25</td>
+                                  <td class="text-center">13:00-16:00 น.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                    <td class="text-center">2021-10-25</td>
+                                    <td class="text-center">13:00-16:00 น.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </form>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>

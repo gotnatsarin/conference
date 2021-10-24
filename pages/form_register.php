@@ -49,10 +49,15 @@
                 <form action="javascript:void(0);" style="text-align: left;">
 
                     <!-- ทดลอง -->
+                  <!-- <div class="container">
+                  <div class="row">
+                  <div class="col-6"> -->
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-user fa-xs"></i></span>
                     <input name="username" id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username" >
                   </div>
+                  <!-- </div>
+                  </div> -->
 
                   <div class="text-center"><label style="color: red;font-size: 12px;" id="username_error_message"></label></div>
           
@@ -62,6 +67,15 @@
                   </div>
 
                   <div class="text-center"><label style="color: red;font-size: 12px;" id="password_error_message"></label></div>
+
+                  <div class="input-group">
+                      <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
+                      <input name="confirmpassword" id="confirm_password" type="password" class="form-control rounded" placeholder="Confirm Password" aria-label="password" >
+                    </div>
+                    <div class="text-center">
+                      <label style="color: red;font-size: 12px;" id="password_error_message"></label>
+                    </div>
+                  </div>
 
                   <div class="input-group">
                     <span class="input-group-text border-0" id="search-addon"><i class="fas fa-file-signature fa-xs"></i></span>
@@ -103,6 +117,7 @@
                     <button onclick="javascript:location.href='index.php'" class="btn btn-warning mt-4" type="button">ย้อนกลับ</button>
                     <button id="submit_reg" type="submit" class="btn btn-success mt-4">ยืนยัน</button>
                   </div>
+                  <!-- </div> -->
                 </form>
               </div>
             </div>

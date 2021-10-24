@@ -7,7 +7,9 @@
   $user_fullname = $_POST['user_fullname'];
   $period = $_POST['period'];
   $date = $_POST['date'];
-
+  $topic = $_POST['topic'];
+  $usefor = $_POST['usefor'];
+  
   $find_booking = "SELECT * FROM report_booking WHERE booking_date = '$date' AND period_t = '$period' ";
   $result_find = mysqli_query($conn,$find_booking);
 
@@ -16,9 +18,9 @@
   }else{
 
   $query = "INSERT INTO report_booking(
-    `room_id`, `user_id`, `room_name`, `room_place`, `user_fullname`, `period_t`,`booking_date`
+    `room_id`, `user_id`, `room_name`, `room_place`, `user_fullname`, `period_t`,`booking_date`,`topic`,`usefor`
     ) VALUES (
-      '$room_id','$user_id','$room_name','$room_place','$user_fullname','$period','$date'
+      '$room_id','$user_id','$room_name','$room_place','$user_fullname','$period','$date','$topic','$usefor'
       )";
 
   $result = mysqli_query($conn,$query);

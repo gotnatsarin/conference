@@ -9,10 +9,12 @@ $room =array();
 while($r = mysqli_fetch_array($result,MYSQLI_ASSOC)){
   $rows['roomByBuildingObj'][] = $r;
 }
+
 $json =  json_encode($rows,JSON_UNESCAPED_UNICODE);
 echo $json;
 }else{
   echo "No ID has been found";
 }
+
 mysqli_close($conn);
 ?>
