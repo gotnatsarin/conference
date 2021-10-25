@@ -5,6 +5,7 @@ $(document).ready(function() {
     var room_place = null;
     var user_fullname = null;
     var room_name = null;
+    var room_img = $('#room_img').val();
 
     $.ajax({
         type: 'GET',
@@ -12,6 +13,7 @@ $(document).ready(function() {
         data: {
             room_id: room_id,
             user_id: user_id,
+            room_img: room_img
         },
         success: function(data) {
             if (data == "null") {
@@ -22,13 +24,14 @@ $(document).ready(function() {
             } else {
                 var new_datas = JSON.parse(data).roomAndUserObj
                 room_place = new_datas[0].room_place
-                console.log(room_place)
+                console.log(new_datas)
                 $('#room_name').text(new_datas[0].room_name)
                 room_name = $('#room_name').text()
                 $('#full_name').text(new_datas[0].full_name)
                 user_fullname = $('#full_name').text()
                 $('#dep_name').text(new_datas[0].dep_name)
                 $('#phone').text(new_datas[0].phone)
+                $('#room_img').attr('src',`picture/${new_datas[0].room_img}`)
             }
         }
     });

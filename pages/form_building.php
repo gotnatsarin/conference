@@ -57,7 +57,7 @@
         
         <div class="row">
           <div class="col-8">
-            <p class="">รูปภาพ</p>
+          <img id="room_img"  style="width: 700px; max-height: 500px">
           </div>
           <div class="col-4">
 
@@ -91,8 +91,6 @@
         </div>
       </div>
     </div>
-
   <script src=ajax/show_building.js></script>
-
 </body>
 </html>

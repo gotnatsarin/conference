@@ -6,6 +6,7 @@ $(document).ready(function() {
         var roomdesc = $('#room_desc').val();
         var roomimg = $('#room_img').val();
         var roombuilding = $('#room_building').val();
+        var img = $('#file')[0].files;
 
         if (roomname == "" || roombuilding == "ชื่ออาคาร" || roomcapacity == "") {
             if (roomname == "") {
@@ -21,16 +22,21 @@ $(document).ready(function() {
                 $('#roomcapacity_error_message').html(message)
             }
         } else {
+            formdata = new FormData()
+            formdata.append('room_name', roomname)
+            formdata.append('roombuilding', roombuilding)
+            formdata.append('room_capacity', roomcapacity)
+            formdata.append('room_desc', roomdesc)
+            formdata.append('img', img[0])
+
             $.ajax({
-                type: 'POST',
+                type: 'post',
                 url: 'query/addroom.php',
-                data: {
-                    room_name: roomname,
-                    roombuilding: roombuilding,
-                    room_capacity: roomcapacity,
-                    room_desc: roomdesc,
-                },
+                data: formdata,
+                contentType: false,
+                processData: false,
                 success: function(data) {
+                    console.log(data)
                     if (data == "true") {
                         $("#myToast_success").toast("show");
                         setTimeout(

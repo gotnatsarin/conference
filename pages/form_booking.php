@@ -39,50 +39,44 @@
           </div>
             <br>
             <div>
-              <form >
+              <form>
                 <div class="row">
-                  <div class="col-4 text-center">
-                    <b>รูปภาพ</b>
+                  <div class="col-6">
+                    <div class="row col-12 text-center">
+                      <b class="mb-4">รูปภาพ</b> </br>
+                        <img id="room_img" style="width: 700px; max-height: 500px">
+                    </div>
                   </div>
-                  <div class="col-5 ">
+
+
+                  <div class="col-6 ">
                     <div class="card card-body border ">
                       <div class="row">
                         <div class="col-6">
                           <b><lable>ชื่อห้อง</lable></b>
-                          <!-- <input type="text" class="form-control" id="room_name" aria-label="name" aria-describedby="email-addon" disabled="disabled"> -->
                           <div>
                             <label id="room_name"></label>
                           </div>
                           <label style="color: red;font-size: 13px;"></label>
                         </div>
                         <div class="col-6">
-                          <input type="hidden" id="room_id" value="<?php echo $_GET['room_id']; ?>">
-                          <input type="hidden" id="user_id" value="<?php echo $session_login_id; ?>">
-                          <input type="hidden" id="room_place">
-                          <b><lable>หัวข้อ</lable></b>
-                          <input type="text" class="form-control" id="topic" placeholder="หัวข้อที่เข้าประชุม" aria-label="name" aria-describedby="email-addon">
-                          <label id="topic_error" style="color: red;font-size: 13px;"></label>
-                        </div>
-                      </div>
-                      <!-- <div class="row">
-                        <div class="col-12">
-                        <b><lable>หัวข้อ</lable></b>
-                          <input type="text" class="form-control" id="topic" placeholder="หัวข้อที่จะประชุม" aria-label="name" aria-describedby="email-addon">
-                          <label id="topic_error" style="color: red;font-size: 13px;"></label>
-                        </div>
-                      </div> -->
-                      <div class="row">
-                        <div class="col-6">
                           <b><lable>ชื่อผู้จอง</lable></b>
-                          <!-- <input type="text" class="form-control" id="full_name" aria-label="name" aria-describedby="email-addon" disabled="disabled"> -->
                           <div>
                             <label id="full_name"></label>
                           </div>
                           <label style="color: red;font-size: 13px;"></label>
                         </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-6">
+                        <b><lable>แผนกที่ขอใช้</lable></b>
+                          <div>
+                            <label id="dep_name"></label>
+                          </div>
+                          <label style="color: red;font-size: 13px;"></label>
+                        </div> 
                         <div class="col-6">
                           <b><lable>โทรศัพท์</lable></b>
-                          <!-- <input type="text" class="form-control" id="phone" aria-label="name" aria-describedby="email-addon" disabled="disabled" > -->
                           <div>
                             <label id="phone"></label>
                           </div>
@@ -91,17 +85,17 @@
                       </div>
                       <div class="row">
                         <div class="col-6">
-                          <b><lable>ใช้สำหรับ</lable></b>
-                          <input type="text" class="form-control" id="book_for"  aria-label="name" aria-describedby="email-addon">
-                          <label id="usedfor_error" style="color: red;font-size: 13px;"></label>
-                        </div> 
+                          <input type="hidden" id="room_id" value="<?php echo $_GET['room_id']; ?>">
+                          <input type="hidden" id="user_id" value="<?php echo $session_login_id; ?>">
+                          <input type="hidden" id="room_place">
+                          <b><lable>หัวข้อ</lable></b>
+                          <input type="text" class="form-control" id="topic" placeholder="ระบุหัวข้อที่ขอใช้" aria-label="name" aria-describedby="email-addon">
+                          <label id="topic_error" style="color: red;font-size: 13px;"></label>
+                        </div>
                         <div class="col-6">
-                        <b><lable>แผนกที่ขอใช้</lable></b>
-                          <!-- <input type="text" class="form-control" id="dep_name"  aria-label="name" aria-describedby="email-addon" disabled="disabled"> -->
-                          <div>
-                            <label id="dep_name"></label>
-                          </div>
-                          <label style="color: red;font-size: 13px;"></label>
+                          <b><lable>ใช้สำหรับ</lable></b>
+                          <input type="text" class="form-control" id="book_for" placeholder="ระบุประเภท"  aria-label="name" aria-describedby="email-addon">
+                          <label id="usedfor_error" style="color: red;font-size: 13px;"></label>
                         </div> 
                       </div>
                       <div class="row">
@@ -111,9 +105,9 @@
                           <label id="date_error" style="color: red;font-size: 13px;"></label>
                         </div>
                         <div class="col-6">
-                          <b><lable>เวลาเริ่มต้น</lable></b>
+                          <b><lable>ช่วงเวลา</lable></b>
                           <select id="start_time" class="form-select" aria-label="Default select example">
-                            <option selected value="">ช่วงเวลาที่ต้องการจอง</option>
+                            <option selected value="">ระบุช่วงเวลาที่ต้องการ</option>
                             <option value="0">เช้า</option>
                             <option value="1">บ่าย</option>
                           </select>

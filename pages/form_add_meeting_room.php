@@ -35,7 +35,7 @@
           <h5>เพิ่มห้องประชุม</h5>
         </div>
           <div>
-            <form >
+            
               <div class="row">
                 <div class="col-2">
                 </div>
@@ -45,13 +45,14 @@
                   </div>
                   <div class="card-body">
                     <div class="card-text text-center">
-                      <input type="text" class="form-control" id="room_name" placeholder="ชื่อห้องประชุม" aria-label="name" aria-describedby="email-addon">
+                    <form method="post" enctype="multipart/form-data" id="myform">
+                      <input type="text" class="form-control" name="room_name" id="room_name" placeholder="ชื่อห้องประชุม" aria-label="name" aria-describedby="email-addon">
                     </div>
                     <div class="text-center" >
                       <label style="color: red;font-size: 13px;" id="roomname_error_message"></label>
                     </div>
                     <div class="text-center">
-                      <select id="room_building" class="form-select" aria-label="Default select example">
+                      <select id="room_building" name="room_building" class="form-select" aria-label="Default select example">
                         <option selected>ชื่ออาคาร</option>
                         <option value="0">อาคารอำนวยการ</option>
                         <option value="1">อาคารเฉลิมพระเกียรติ</option>
@@ -61,22 +62,22 @@
                       <label style="color: red;font-size: 13px;" id="roombuilding_error_message"></label>
                     </div>
                     <div class="card-text text-center">
-                      <input type="text" class="form-control" id="room_capacity" placeholder="ความจุ/จำนวน" aria-label="name" aria-describedby="email-addon">
+                      <input type="text" class="form-control" name="room_capacity" id="room_capacity" placeholder="ความจุ/จำนวน" aria-label="name" aria-describedby="email-addon">
                     </div>
                     <div class="text-center" >
                       <label style="color: red;font-size: 13px;" id="roomcapacity_error_message"></label>
                     </div>
                     <div class="card-text text-center mb-4">
-                      <textarea type="text" class="form-control" id="room_desc" placeholder="รายละเอียดเพิ่มเติม" aria-label="name" aria-describedby="email-addon"></textarea>
+                      <textarea type="text" class="form-control" name="room_desc" id="room_desc" placeholder="รายละเอียดเพิ่มเติม" aria-label="name" aria-describedby="email-addon"></textarea>
                     </div>
                     <div class="card-text text-center">
                       <form id="file">
-                      <input type="file" class="form-control" name="room_img" id="room_img" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
+                      <input type="file" class="form-control" name="file" id="file" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
                       </form>
                     </div>
                     <div class="text-start mb-3">
                       <a href="form_manage_meeting_room.php" class="btn btn-danger btn-lg  mt-4">ย้อนกลับ</a>
-                      <button class="btn btn-success btn-lg me-md-2" type="button" id="addroom">บันทึก</button>
+                      <button class="btn btn-success btn-lg me-md-2" type="submit" id="addroom">บันทึก</button>
                     </div>
                   </div>
                 </div>

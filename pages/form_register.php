@@ -10,6 +10,11 @@
       ?>
       <title>ระบบจองห้องประชุม : Reserve Conference System</title>
   </head>
+  <style>
+    .loginBoxContent {
+    width: 500px;
+}
+  </style>
   <body>
       <!-- background -->
       <div class="bg-image" style="background-image: url('https://www.img.in.th/images/a7f91e28a2cb2a58f9900e77b6decea0.jpg'); height: 100vh">
@@ -46,82 +51,118 @@
                   <h5>Register</h5>
                 </div>
                   <br/>
-                <form action="javascript:void(0);" style="text-align: left;">
+                  <form action="javascript:void(0);" style="text-align: left;">
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-user fa-xs"></i></span>
+                        <input name="username" id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username" >
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="username_error_message"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
+                        <input name="password" id="password" type="password" class="form-control rounded" placeholder="Password" aria-label="password">
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="password_error_message"></label>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
+                        <input name="confirmpass" id="confirmPassword" type="password" class="form-control rounded" placeholder="Confirm Password">
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="confirm_password_error_message"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="input-group">
+                          <span class="input-group-text border-0" id="search-addon"><i class="fas fa-file-signature fa-xs"></i></span>
+                          <input name="Fullname" id="Fullname" type="text" class="form-control rounded" placeholder="Full Name" >
+                        </div>
+                        <div class="text-center">
+                          <label style="color: red;font-size: 12px;" id="fullname_error_message"></label>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-list-ol fa-xs"></i></span>
+                        <input name="Department" id="department" type="text" class="form-control rounded" placeholder="Department" aria-label="username" >
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="department_error_message"></label>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-list-ol fa-xs"></i></span>
+                        <input name="idEmployee" id="idEmployee" type="text" class="form-control rounded" placeholder="Employee ID" aria-label="idEmployee"/>
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="idEmployee_error_message"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-envelope fa-xs"></i></span>
+                        <input name="email" id="email" type="text" class="form-control rounded" placeholder="Email" aria-label="email"/>
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="email_error_message"></label>
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="input-group">
+                        <span class="input-group-text border-0" id="search-addon"><i class="fas fa-phone-square-alt fa-xs"></i></span>
+                        <input name="Phone" id="Phone" type="text" class="form-control rounded" placeholder="Phone Number" aria-label="phone" maxlength="10"/>
+                      </div>
+                      <div class="text-center">
+                        <label style="color: red;font-size: 12px;" id="Phone_error_message"></label>
+                      </div>
+                    </div>
+                  </div>
 
                     <!-- ทดลอง -->
-                  <!-- <div class="container">
-                  <div class="row">
-                  <div class="col-6"> -->
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-user fa-xs"></i></span>
-                    <input name="username" id="username" type="text" class="form-control rounded" placeholder="Username" aria-label="username" >
-                  </div>
-                  <!-- </div>
-                  </div> -->
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="username_error_message"></label></div>
-          
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
-                    <input name="password" id="password" type="password" class="form-control rounded" placeholder="Password" aria-label="password" >
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="password_error_message"></label></div>
-
-                  <div class="input-group">
-                      <span class="input-group-text border-0" id="search-addon"><i class="fas fa-unlock-alt fa-xs"></i></span>
-                      <input name="confirmpassword" id="confirm_password" type="password" class="form-control rounded" placeholder="Confirm Password" aria-label="password" >
-                    </div>
-                    <div class="text-center">
-                      <label style="color: red;font-size: 12px;" id="password_error_message"></label>
-                    </div>
-                  </div>
-
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-file-signature fa-xs"></i></span>
-                    <input name="fullname" id="fullname" type="text" class="form-control rounded" placeholder="Full Name" aria-label="fullname" >
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="fullname_error_message"></label></div>
-                  
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-list-ol fa-xs"></i></span>
-                    <input name="idEmployee" id="idEmployee" type="text" class="form-control rounded" placeholder="Employee ID" aria-label="idEmployee"/>
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="idEmployee_error_message"></label></div>
-
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-list-ol fa-xs"></i></span>
-                    <input name="department" id="department" type="text" class="form-control rounded" placeholder="Department" aria-label="department">
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="department_error_message"></label></div>
-
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-envelope fa-xs"></i></span>
-                    <input name="email" id="email" type="text" class="form-control rounded" placeholder="Email" aria-label="email"/>
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="email_error_message"></label></div>
-
-                  <div class="input-group">
-                    <span class="input-group-text border-0" id="search-addon"><i class="fas fa-phone-square-alt fa-xs"></i></span>
-                    <input name="Phone" id="Phone" type="text" class="form-control rounded" placeholder="Phone Number" aria-label="phone" maxlength="10"/>
-                  </div>
-
-                  <div class="text-center"><label style="color: red;font-size: 12px;" id="Phone_error_message"></label></div>
-
-                  <!-- ทดลอง -->
-                  <div class="text-center mt-2">
-                    <button onclick="javascript:location.href='index.php'" class="btn btn-warning mt-4" type="button">ย้อนกลับ</button>
-                    <button id="submit_reg" type="submit" class="btn btn-success mt-4">ยืนยัน</button>
-                  </div>
-                  <!-- </div> -->
-                </form>
+                      <div class="text-center mt-1">
+                        <button onclick="javascript:location.href='index.php'" class="btn btn-warning btn-lg" type="button">ย้อนกลับ</button>
+                        <button id="submit_reg" type="submit" class="btn btn-success btn-lg">ยืนยัน</button>
+                      </div>
+                  </form>
               </div>
             </div>
       </div>
   </body>
-  <script src="ajax/form_register.js" ></script>
+  <script src="ajax/form_register.js">
+      var check = function() {
+      if (password != confirmPassword) {
+        $('#confirm_password_error_message').html('รหัสผ่านไม่ตรงกัน');
+        $('#password_error_message').html('รหัสผ่านไม่ตรงกัน');
+        } 
+      else {
+        $('#confirm_password_error_message').html('');
+        $('#password_error_message').html('');
+        }
+      };
+  </script>
 </html>

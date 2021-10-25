@@ -24,7 +24,7 @@ $(document).ready(function() {
                     <td class="col-2 text-center"><div>${element['booking_date']}</div>
                     <p class="text-center mt-1">${(element['period_t'] == 0)? (AM):(PM) }</p>
                     </td>
-                    <td class="col-2 text-center"><i class="fas fa-print fa-3x"></i></td>
+                    <td class="col-2 text-center"><input type="button" class="btn btn-success" onclick="windown.print();" value="print"></td>
                     </tr>`)
                     console.log(element)
                 }));
@@ -33,18 +33,3 @@ $(document).ready(function() {
         }
     });
 });
-
-{
-    /* <tr>
-                            <th scope='row'>${++index}</th>
-                            <td class="text-center">#</td>
-                            <td class="text-center">
-                              <h6>${element['room_name']}</h6>
-                              <p>จำนวน ${element['room_capacity']} คน</p>
-                            </td>
-                            <td class="text-center">
-                            <a href="form_booking.php?room_id=${element['room_id']}" class="btn btn-success btn-lg"> เลือก </a> &nbsp;
-                               <a href="#" class="btn btn-primary btn-lg"> รายละเอียด</a>
-                            </td>
-                            </tr> */
-}

@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php require('mdb_js.php'); ?>
   <?php require('mdb_css.php'); ?>
-  <title>เพิ่มห้องประชุม</title>
+  <title>หน้าหลัก</title>
 </head>
 <body>
     <?php require('components/navbar.php'); ?>
+    <input type="hidden" id="room_id" value="<?php echo $_GET['room_id']; ?>"></input>
       <br/>
       <div class="container-fluid">
         <div>
@@ -23,37 +24,34 @@
             <div>
               <form >
                 <div class="row">
-                  <div class="col-3 text-center">
-                    <?php require('components/menu.php'); ?>
+                  <div class="col-2 text-center">
+                    <!-- navbar -->
+                    <div id="nav">
+
+                    </div>
+                    <!-- navbar -->
                   </div>
                   <div class="col-9">
                     <div class="card card-body border rounded">
                       <div>
-                        <form>
-                          <table class="table table-hover border">
-                            <thead>
-                              <tr>
-                                <th class="col-1">ลำดับที่</th>
-                                <th class="text-center">วันที่</th>
-                                <th class="text-center">เวลา</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                  <td class="text-center">2021-10-25</td>
-                                  <td class="text-center">13:00-16:00 น.</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                    <td class="text-center">2021-10-25</td>
-                                    <td class="text-center">13:00-16:00 น.</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </form>
+                        <table class="table table-hover border">
+                          <thead>
+                            <tr>
+                              <th class="col-1">ลำดับที่</th>
+                              <th class="text-center">วันที่</th>
+                              <th class="text-center">เวลา</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tbbody">
+                        
+                            </tbody>
+                          </table>
+                         
                       </div>
                     </div>
+                  </div>
+                  <div class="col-1">
+
                   </div>
                 </div>
               </form>
@@ -61,4 +59,5 @@
       </div>
 </body>
 <script src="ajax/add_room.js"></script>
+<script src="ajax/showroom.js"></script>
 </html>

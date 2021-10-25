@@ -26,7 +26,7 @@
           </div>
           </br>
           <div>
-            <table class="table table-hover border">
+            <table class="table table-hover border" id="myfrm">
               <thead>
                 <tr>
                   <th class="col-3 text-center">หัวข้อ</th>

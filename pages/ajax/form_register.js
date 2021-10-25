@@ -28,14 +28,14 @@ $(document).ready(function() {
     });
 
     $('#confirmPassword').keyup(function() {
-      if ($(this).val() == "") {
-          $(this).addClass('border border-danger')
-          $('#confirm_password_error_message').html(message)
-      } else {
-          $('#confirm_password_error_message').html('')
-          $(this).removeClass('border border-danger')
-      }
-  });
+        if ($(this).val() == "") {
+            $(this).addClass('border border-danger')
+            $('#confirm_password_error_message').html(message)
+        } else {
+            $('#confirm_password_error_message').html('')
+            $(this).removeClass('border border-danger')
+        }
+    });
 
     $('#Fullname').keyup(function() {
         if ($(this).val() == "") {
@@ -101,11 +101,11 @@ $(document).ready(function() {
         var Phone = $('#Phone').val();
 
         $('#password').focus(function() {
-          $('#password_error_message').html('');
+            $('#password_error_message').html('');
         });
-    
+
         $('#confirmPassword').focus(function() {
-          $('#password_error_message').html('');
+            $('#password_error_message').html('');
         });
 
         if (username == "" || password == "" || confirmPassword == "" || password != confirmPassword || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
@@ -118,15 +118,15 @@ $(document).ready(function() {
                 $('#password_error_message').html(message);
             }
             if (confirmPassword == "") {
-              $('#confirmPassword').addClass('border border-danger');
-              $('#confirm_password_error_message').html(message);
+                $('#confirmPassword').addClass('border border-danger');
+                $('#confirm_password_error_message').html(message);
             }
             if (password != confirmPassword) {
                 $('#password').val('');
                 $('#confirmPassword').val('');
                 $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
                 $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
-            } 
+            }
             if (fullname == "") {
                 $('#Fullname').addClass('border border-danger');
                 $('#fullname_error_message').html(message);
@@ -180,7 +180,7 @@ $(document).ready(function() {
                         $("#myToast_reg").toast("show");
                     }
                 }
-            });        
+            });
         }
     });
 });

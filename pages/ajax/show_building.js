@@ -27,7 +27,7 @@ $(document).ready(function() {
                     </td>
                     <td class="text-center">
                     <a href="form_booking.php?room_id=${element['room_id']}" class="btn btn-success btn-lg"> เลือก </a> &nbsp;
-                       <button type="button" id="btn_des" class="btn btn-primary btn-lg"> รายละเอียด</button>
+                       <button type="button" value="${index}" id="btn_des" class="btn btn-primary btn-lg"> รายละเอียด</button>
                     </td>
                     </tr>`);
                     console.log(element);
@@ -38,11 +38,14 @@ $(document).ready(function() {
 
     $(document).on("click", "#btn_des", function() {
         let new_data = JSON.parse(data_arr).roomByBuildingObj;
-        console.log(new_data)
+        index_arr = $(this).val()-1
+        console.log(index_arr)
+        console.log(`picture/${new_data[index_arr].room_img}`);
             // $('#image_modal').attr(`src`, ``)
         $('#Modal_Desc').modal('show');
-        $('#building').html(new_data[0].room_place);
-        $('#capacity').html(`${new_data[0].room_capacity} คน`);
-        $('#desc').html(new_data[0].room_desc);
+        $('#building').html(new_data[index_arr].room_place);
+        $('#capacity').html(`${new_data[index_arr].room_capacity} ที่นั่ง`);
+        $('#desc').html(new_data[index_arr].room_desc);
+        $('#room_img').attr('src',`picture/${new_data[index_arr].room_img}`);
     });
 });
