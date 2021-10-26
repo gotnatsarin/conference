@@ -3,6 +3,7 @@ $(document).ready(function() {
     console.log(room_id)
     var time = null;
     var idactive = null;
+    $('#nav_main').addClass(' active');
 
     $.ajax({
         type: 'GET',

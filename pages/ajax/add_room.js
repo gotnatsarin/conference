@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var message = "กรุณาระบุข้อมูลให้ครบ";
+
     $('#addroom').click(function() {
         var roomname = $('#room_name').val();
         var roomcapacity = $('#room_capacity').val();

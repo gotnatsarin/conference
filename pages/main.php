@@ -9,13 +9,15 @@
   <?php require('mdb_css.php'); ?>
   <title>หน้าหลัก</title>
 </head>
+<style>
+</style>
 <body>
     <?php require('components/navbar.php'); ?>
     <input type="hidden" id="room_id" value="<?php echo $_GET['room_id']; ?>"></input>
       <br/>
       <div class="container-fluid">
         <div>
-          <h6>ปฏิทินห้องประชุม</h6>
+          <h6>ตารางการจองห้องประชุม</h6>
         </div>
           <div>
             <h5>รายการห้องประชุม</h5>
@@ -24,7 +26,7 @@
             <div>
               <form >
                 <div class="row">
-                  <div class="col-2 text-center">
+                  <div class="col-3 text-center">
                     <!-- navbar -->
                     <div id="nav">
 

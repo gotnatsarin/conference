@@ -2,7 +2,7 @@
 require('connect.php');
 $user_id = $_GET['user_id'];
 
-$query = "SELECT * FROM report_booking WHERE user_id = '$user_id '";
+$query = "SELECT * FROM `report_booking` WHERE `user_id`='$user_id' ORDER BY `report_booking`.`booking_date` DESC";
 $result = mysqli_query($conn,$query);
 
 while($r = mysqli_fetch_array($result,MYSQLI_ASSOC)){

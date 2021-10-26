@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var AM = "09:00 - 12:00 น.";
+    var AM = "08:00 - 12:00 น.";
     var PM = "13:00 - 16:00 น.";
     var user_id = $('#user_id').val();
     $.ajax({
@@ -16,19 +16,22 @@ $(document).ready(function() {
             } else {
                 new_data.forEach(((element, index) => {
                     $('#tablebody').append(`<tr>
-                    <td class="col-3 text-center" >${element['topic']}</td>
-                    <td class="col-3"> 
+                    <td class="text-center" >${++index}</td>
+                    <td class="text-center" >${element['topic']}</td>
+                    <td class=""> 
                     <div class="p-1 text-center">${element['room_name']}</div>
                     </td>
-                    <td class="col-2 text-center">${element['user_fullname']}</td>
-                    <td class="col-2 text-center"><div>${element['booking_date']}</div>
+                    <td class="text-center">${element['user_fullname']}</td>
+                    <td class="text-center"><div>${element['booking_date']}</div>
                     <p class="text-center mt-1">${(element['period_t'] == 0)? (AM):(PM) }</p>
                     </td>
-                    <td class="col-2 text-center"><input type="button" class="btn btn-success" onclick="windown.print();" value="print"></td>
+                    <td class="col-2 text-center">
+                    <a href="form_print.php?id=${element['id']}" target="_blank"><button class="btn btn-success">print</button></a>
+                    </td>
                     </tr>`)
                     console.log(element)
+                        // <input type="button" class="btn btn-success" onclick="window.print();" value="print">
                 }));
-
             }
         }
     });

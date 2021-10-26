@@ -10,7 +10,6 @@
   <title>จัดการห้องประชุม</title>
 </head>
 <body>
-  <input type="hidden" id="room_id" value="<?php echo $_GET['id']; ?>"></input>
     <?php require('components/navbar.php'); ?>
       <br/>
       <div class="container">
@@ -18,7 +17,9 @@
           <h5>แก้ไขห้องประชุม</h5>
         </div>
           <div>
-            <form>
+          <form method="post" enctype="multipart/form-data" id="myform">
+          <input type="hidden" id="room_id" value="<?php echo $_GET['id']; ?>"/>
+          <input type="hidden" id="old_name" />
               <div class="row">
                 <div class="col-2">
                 </div>
@@ -53,7 +54,7 @@
                       <textarea type="text" class="form-control" id="room_desc" placeholder="รายละเอียดเพิ่มเติม" aria-label="name" aria-describedby="email-addon"></textarea>
                     </div>
                     <div class="card-text text-center">
-                      <input type="file" class="form-control" id="room_img" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
+                      <input type="file" class="form-control" name="file" id="file" placeholder="รูปภาพ" aria-label="name" aria-describedby="email-addon">
                     </div>
                     <div class="text-start mb-3">
                       <a href="form_manage_meeting_room.php" class="btn btn-danger btn-lg  mt-4">ย้อนกลับ</a>
@@ -65,6 +66,33 @@
             </form>
         </div>
       </div>
+  <div class="toast bg-success text-white" data-bs-animation="true" id="editSuccessToast" data-bs-autohide="true">
+      <div class="toast-header bg-success text-white">
+        <strong class="me-auto"><i class="bi-gift-fill"></i>สำเร็จ</strong>
+      </div>
+    <div class="toast-body">
+      แก้ไขห้องประชุมสำเร็จแล้ว
+    </div>
+  </div>
+
+  <div class="toast bg-danger text-white" data-bs-animation="true" id="editFailToast" data-bs-delay="2000" data-bs-autohide="true">
+      <div class="toast-header bg-danger text-white">
+        <strong class="me-auto"><i class="bi-gift-fill"></i>ผิดพลาด</strong>
+      </div>
+      <div class="toast-body">
+        ไม่สามารถแก้ไขห้องประชุมได้ กรุณาลองใหม่อีกครั้ง
+      </div>
+  </div>
+
+    <div class="toast bg-danger text-white" data-bs-animation="true" id="roomDuplicateToast" data-bs-delay="2000" data-bs-autohide="true">
+        <div class="toast-header bg-danger text-white">
+          <strong class="me-auto"><i class="bi-gift-fill"></i>ผิดพลาด</strong>
+        </div>
+        <div class="toast-body">
+        ไม่สามารถแก้ไขห้องประชุมได้ กรุณาลองใหม่อีกครั้ง
+        </div>
+    </div>
+
 </body>
 <script src="ajax/editroom.js"></script>
 </html>

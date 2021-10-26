@@ -10,6 +10,7 @@ $(document).ready(function() {
         success: function(data) {
             var new_data = JSON.parse(data).roomDetailObj;
             $('#room_name').val(new_data[0]['room_name'])
+            $('#old_name').val(new_data[0]['room_img'])
             $(`option[value="${new_data[0]['room_building']}"]`).attr("selected", "selected");
             $('#room_capacity').val(new_data[0]['room_capacity'])
             $('#room_desc').val(new_data[0]['room_desc'])
@@ -23,8 +24,8 @@ $(document).ready(function() {
         var roomdesc = $('#room_desc').val();
         var roomimg = $('#room_img').val();
         var roombuilding = $('#room_building').val();
-        // var img = $('#file')[0].files;
-
+        var oldname = $('#old_name').val();
+        var img = $('#file')[0].files;
         if (roomname == "" || roombuilding == "ชื่ออาคาร" || roomcapacity == "") {
             if (roomname == "") {
                 $('#room_name').addClass('border border-danger')
@@ -45,7 +46,8 @@ $(document).ready(function() {
             formdata.append('room_building', roombuilding)
             formdata.append('room_capacity', roomcapacity)
             formdata.append('room_desc', roomdesc)
-                // formdata.append('img', img[0])
+            formdata.append('img', img[0])
+            formdata.append('old_name', oldname)
 
             $.ajax({
                 type: 'post',

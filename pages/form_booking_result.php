@@ -15,8 +15,8 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
+          <div class="col-1"></div>
+          <div class="col-10">
 
           <div>
             <h6>จองห้องประชุม >>> ผลการจอง</h6>
@@ -29,11 +29,12 @@
             <table class="table table-hover border" id="myfrm">
               <thead>
                 <tr>
+                  <th class="col-1 text-center">ลำดับที่</th>
                   <th class="col-3 text-center">หัวข้อ</th>
-                  <th class="col-3 text-center ">ชื่อห้อง</th>
+                  <th class="col-3 text-center">ชื่อห้อง</th>
                   <th class="col-2 text-center">ชื่อผู้จอง</th>
                   <th class="col-2 text-center">วันที่จอง</th>
-                  <th class="col-2 text-center">พิมพ์</th>
+                  <th class="col-1 text-center">พิมพ์</th>
                 </tr>
               </thead>
               <tbody id="tablebody">
@@ -42,7 +43,7 @@
           </div>
 
           </div>
-          <div class="col-2"></div>
+          <div class="col-1"></div>
         </div>     
 
       </div>

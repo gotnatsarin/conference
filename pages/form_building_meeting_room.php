@@ -54,4 +54,9 @@
         </div>
       </div>
 </body>
+<script>
+        $(document).ready(function() {
+          $('#nav_booking').addClass(' active');
+        });
+        </script>
 </html>
