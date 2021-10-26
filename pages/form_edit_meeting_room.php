@@ -10,6 +10,7 @@
   <title>จัดการห้องประชุม</title>
 </head>
 <body>
+  <input type="hidden" id="room_id" value="<?php echo $_GET['id']; ?>"></input>
     <?php require('components/navbar.php'); ?>
       <br/>
       <div class="container">
@@ -34,7 +35,7 @@
                     </div>
                     <div class="text-center">
                       <select id ="room_building" class="form-select" aria-label="Default select example">
-                        <option selected>ชื่ออาคาร</option>
+                        <option disabled>ชื่ออาคาร</option>
                         <option value="0">อาคารอำนวยการ</option>
                         <option value="1">อาคารเฉลิมพระเกียรติ</option>
                       </select>
@@ -56,7 +57,7 @@
                     </div>
                     <div class="text-start mb-3">
                       <a href="form_manage_meeting_room.php" class="btn btn-danger btn-lg  mt-4">ย้อนกลับ</a>
-                      <button class="btn btn-success btn-lg me-md-2" type="button" id="addroom">บันทึก</button>
+                      <button class="btn btn-success btn-lg me-md-2" type="button" id="editroom">บันทึก</button>
                     </div>
                   </div>
                 </div>
@@ -65,5 +66,5 @@
         </div>
       </div>
 </body>
-<script src="ajax/add_room.js"></script>
+<script src="ajax/editroom.js"></script>
 </html>

@@ -10,6 +10,7 @@ $(document).ready(function() {
         data: {},
         success: function(data) {
             var new_data = JSON.parse(data).roomObj;
+            console.log(new_data)
             new_data.forEach(((element, index) => {
                 $('#nav').append(`
                 <ul class="list-group">
@@ -18,12 +19,18 @@ $(document).ready(function() {
                   </li>
                 </ul>
                 `);
+
+            }));
+            try {
                 $(`li.active a.text-light`).removeClass('text-light')
                 $(`li.active`).removeClass('active')
                 $(`li#${room_id}`).addClass('active')
                 $(`li#${room_id} a`).removeClass('text-dark')
                 $(`li#${room_id} a`).addClass('text-light')
-            }));
+            } catch {
+
+            }
+
         }
     });
 
@@ -37,8 +44,8 @@ $(document).ready(function() {
             try {
                 var new_data2 = JSON.parse(data).bookedObj;
                 new_data2.forEach(((element2, index) => {
-                    if (element2['booking_date'] == 0) {
-                        time = "8.00-12.00 น."
+                    if (element2['period_t'] == 0) {
+                        time = "9.00-12.00 น."
                     } else {
                         time = "13.00-16.00 น."
                     }
