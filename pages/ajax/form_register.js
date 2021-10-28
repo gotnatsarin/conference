@@ -91,6 +91,7 @@ $(document).ready(function() {
     });
 
     $('#submit_reg').click(function() {
+        console.log("test")
         var username = $('#username').val();
         var password = $('#password').val();
         var confirmPassword = $('#confirmPassword').val();
@@ -99,16 +100,8 @@ $(document).ready(function() {
         var department = $('#department').val();
         var email = $('#email').val();
         var Phone = $('#Phone').val();
-
-        $('#password').focus(function() {
-            $('#password_error_message').html('');
-        });
-
-        $('#confirmPassword').focus(function() {
-            $('#password_error_message').html('');
-        });
-
-        if (username == "" || password == "" || confirmPassword == "" || password != confirmPassword || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
+        // password != confirmPassword ||
+        if (username == "" || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
             if (username == "") {
                 $('#username').addClass('border border-danger');
                 $('#username_error_message').html(message);
@@ -121,12 +114,12 @@ $(document).ready(function() {
                 $('#confirmPassword').addClass('border border-danger');
                 $('#confirm_password_error_message').html(message);
             }
-            if (password != confirmPassword) {
-                $('#password').val('');
-                $('#confirmPassword').val('');
-                $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
-                $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
-            }
+            // if (password != confirmPassword) {
+            //     $('#password').val('');
+            //     $('#confirmPassword').val('');
+            //     $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+            //     $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+            // }
             if (fullname == "") {
                 $('#Fullname').addClass('border border-danger');
                 $('#fullname_error_message').html(message);

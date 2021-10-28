@@ -34,22 +34,23 @@
                       <div>
                         <table class="table table-hover border">
                           <thead>
-                            <tr>
+                            <tr id="headtb">
                               <th class="col-1">ลำดับที่</th>
                               <th class="text-center">วันที่</th>
                               <th class="text-center">เวลา</th>
                             </tr>
                           </thead>
                           <tbody id="tbbody">
-                        
                             </tbody>
                           </table>
-                         
+                         <div id="alert">
+
+
+                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-1">
-
                   </div>
                 </div>
               </form>
@@ -58,4 +59,10 @@
 </body>
 <!-- <script src="ajax/add_room.js"></script> -->
 <script src="ajax/showroom.js"></script>
+<script>
+
+$(document).ready(function() {
+$('#main').addClass(' active');
+});
+</script>
 </html>

@@ -1,5 +1,5 @@
-<div id="css_time_run" class="col-6">
-<?=date("H:i:s")?>
+<div id="css_time_run" class="col-12">
+<?=date("d/m/Y H:i:s")?>
 </div>
 
 <script type="text/javascript">
@@ -22,7 +22,7 @@ $(function(){
         if(mkSecond.length==1){  
             mkSecond="0"+mkSecond;  
         }
-        var runDateTime=mkHour+":"+mkMinute+":"+mkSecond;        
+        var runDateTime= nowDateTime.getDate()+"/"+(nowDateTime.getMonth()+1)+"/"+nowDateTime.getFullYear() +" "+ mkHour+":"+mkMinute+":"+mkSecond;        
         $("#css_time_run").html(runDateTime);    
      },1000);
 });

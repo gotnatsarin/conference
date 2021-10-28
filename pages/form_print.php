@@ -7,7 +7,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 $time =null;
 if($row['period_t']==0){
-  $time = "8.00-12.00 น.";
+  $time = "9.00-12.00 น.";
 }else{
   $time = "13.00-16.00 น.";
 }
@@ -56,7 +56,6 @@ if($row['period_t']==0){
     <title>พิมพ์ผลการจอง</title>
   </head>
   <body>
-    <!-- <button type="button" id="print" >Print</button> -->
       <page size="A4">
         </br>
         <div class="row mt-5">
@@ -74,22 +73,18 @@ if($row['period_t']==0){
               </div>
               <div class="row">
                 <div class="col-1">
-                  
+                
                 </div>
                   <div class="col-5 text-center mt-5">
                     <p style="font-size : 16px;">ลงชื่อ...............................................ผู้จอง</p>
                     <p><?php  echo "(". $row['user_fullname'].")";  ?></p>
                   </div> &nbsp;
                   <div class="col-5 text-center mt-5">
-                  <p style="font-size : 16px;">ลงชื่อ...............................................ผู้ดูแลระบบ</p>
-                  <p>(..........................................................)</p>
+                    <p style="font-size : 16px;">ลงชื่อ...............................................ผู้ดูแลระบบ</p>
+                    <p>(..........................................................)</p>
                   </div>
-                  
                 </div>
-
         </div>
-        
-        
       </page>
     <script>
       $(document).ready(function() {

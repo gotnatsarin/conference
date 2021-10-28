@@ -17,8 +17,6 @@ $(document).ready(function() {
     $("#password").keyup(function() {
         if ($(this).val() == "") {
             $(this).addClass('border border-danger')
-            3
-
             $('#password_error_message').html('กรุณาระบุข้อมูลให้ครบ')
         } else {
             $('#password_error_message').html('')
@@ -29,6 +27,7 @@ $(document).ready(function() {
     $('#submit').click(function() {
         var username = $('#username').val()
         var password = $('#password').val()
+
         if (username == "" || password == "") {
             if (username == "") {
                 $('#username').addClass('border border-danger')
@@ -47,7 +46,7 @@ $(document).ready(function() {
                     password: $("#password").val(),
                 },
                 success: function(data) {
-                var new_data = JSON.parse(data)
+                    var new_data = JSON.parse(data)
                     if (new_data.status == "true") {
                         window.location.href = `main.php?room_id=${new_data.id}`;
                     } else {

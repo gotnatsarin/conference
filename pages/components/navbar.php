@@ -34,7 +34,7 @@
           <div class="col-12">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li id="nav_main" class="nav-item">
-                <a class="nav-link"  href="main.php?room_id=<?php echo $_SESSION['roomfirst'];?>">หน้าหลัก</a>
+                <a class="nav-link" id="main" href="main.php?room_id=<?php echo $_SESSION['roomfirst'];?>">หน้าหลัก</a>
               </li>
               <li id="nav_booking" class="nav-item">
                 <a class="nav-link" aria-current="page" href="form_building_meeting_room.php">จองห้องประชุม</a>
