@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2021 at 04:39 PM
+-- Generation Time: Oct 28, 2021 at 06:57 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.3.29
 
@@ -39,25 +39,6 @@ CREATE TABLE `report_booking` (
   `topic` varchar(255) NOT NULL,
   `usefor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `report_booking`
---
-
-INSERT INTO `report_booking` (`id`, `room_id`, `user_id`, `room_name`, `room_place`, `user_fullname`, `period_t`, `booking_date`, `topic`, `usefor`) VALUES
-(12, 142, 70, 'ห้องประชุมอำนวยการ', 'อาคารอำนวยการ', 'Kantapat Supaweerawat', 1, '2021-10-14', 'Ur', 'kanta'),
-(13, 142, 70, 'ห้องประชุมอำนวยการ', 'อาคารอำนวยการ', 'Kantapat Supaweerawat', 1, '2021-10-08', 'fias', 'tongjarin'),
-(14, 153, 70, 'กหกฟ', 'อาคารเฉลิมพระเกียรติ', 'Kantapat Supaweerawat', 0, '2021-11-19', 'ทดสอบ result', 'ทดสอบ result'),
-(15, 153, 11, 'กหกฟ', 'อาคารเฉลิมพระเกียรติ', 'Tanapong Keawpho', 0, '2021-10-15', 'ทดสอบ result', 'ทดสอบ result'),
-(34, 165, 1, 'asdasdasdasdasdasd', 'อาคารอำนวยการ', 'Admin Admin', 1, '2021-10-28', 'ำอพอพอ', 'พอพำอพ'),
-(35, 160, 70, 'ห้องประสงค์', 'อาคารอำนวยการ', 'Kantapat Supaweerawat', 0, '2021-01-01', 'เฟียส', 'หล่อมาก'),
-(36, 185, 1, 'ห้องประชุมสำหรับรับรอง', 'อาคารอำนวยการ', 'Admin Admin', 1, '2022-02-18', 'Topic', 'Meeting'),
-(37, 177, 1, 'ห้องประชุมพิกุล 1', 'อาคารอำนวยการ', 'Admin Admin', 0, '2021-10-27', 'sdfvdfsv', 'sdvsdv'),
-(38, 177, 1, 'ห้องประชุมพิกุล 1', 'อาคารอำนวยการ', 'Admin Admin', 0, '2021-10-26', 'ทดสอบ', 'ทดสอบ'),
-(39, 177, 1, 'ห้องประชุมพิกุล 1', 'อาคารอำนวยการ', 'Admin Admin', 1, '2021-10-26', 'ทดสอบ2', 'ทดสอบ'),
-(40, 177, 1, 'ห้องประชุมพิกุล 1', 'อาคารอำนวยการ', 'Admin Admin', 1, '2021-10-27', 'ทดสอบ23', 'ทดสอบ'),
-(41, 177, 1, 'ห้องประชุมพิกุล 1', 'อาคารอำนวยการ', 'Admin Admin', 0, '2017-10-11', 'อยากจะใช้ห้อง', 'นอน'),
-(42, 187, 87, 'ห้องโนว่า', 'อาคารอำนวยการ', 'Natsarin', 1, '2021-10-29', 'test', 'test');
 
 -- --------------------------------------------------------
 
@@ -114,14 +95,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `emp_id`, `username`, `password`, `email`, `full_name`, `dep_name`, `phone`, `role`) VALUES
-(1, '1', 'admin', '1234', 'admin@mail.com', 'Admin Admin', 'แผนกแอดมิน', '0970616129', 0),
-(2, NULL, 'admin2', 'admin2', 'admin2@mail.com', 'Admin2 Admin2', 'Admin', '', 0),
-(3, NULL, 'user', '1234', 'user@mail.com', 'User User', 'user', '', 1),
-(11, 'empid1', 'jadae007', '1234', 'jadae2225@gmail.com', 'Tanapong Keawpho', 'Admin', '0970616129', 1),
-(44, 'dsasdas', 'armoho', '1234', 'xxx3', 'dady', 'fgg', 'x', 1),
-(70, '1997', 'kantapat97', '1234', 'kantapat.weezy1997@gmail.com', 'Kantapat Supaweerawat', 'วิศวกรรมคอมพิวเตอร์', '0987290448', 1),
-(86, 'xs', 'fiasjaaa', '2222', 'xs@s.com', 'xs', 'xs', '3411111111', 1),
-(87, '321', 'gotnatsarin', 'got1234', 'gfjkdj@gmail.com', 'Natsarin', '123', '0622165874', 1);
+(1, '1', 'admin', '1234', 'admin@mail.com', 'Admin Admin', 'แผนกแอดมิน', '0970616129', 0);
 
 --
 -- Indexes for dumped tables
@@ -157,19 +131,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `report_booking`
 --
 ALTER TABLE `report_booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `room_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+  MODIFY `room_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

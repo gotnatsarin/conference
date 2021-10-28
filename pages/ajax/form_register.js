@@ -1,8 +1,6 @@
 $(document).ready(function() {
     var message = "กรุณาระบุข้อมูลให้ครบ";
-    var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
     var phoneno = /^[0-9]*$/
-    var usernamecheck = /[^a-zA-Z0-9_]/
 
     $('#username').keyup(function() {
         if ($(this).val() == "") {
@@ -91,6 +89,8 @@ $(document).ready(function() {
     });
 
     $('#submit_reg').click(function() {
+        var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
+        var usernamecheck = /[^a-zA-Z0-9_]/
         console.log("test")
         var username = $('#username').val();
         var password = $('#password').val();
@@ -102,6 +102,7 @@ $(document).ready(function() {
         var Phone = $('#Phone').val();
         // password != confirmPassword ||
         if (username == "" || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
+            console.log("test condition null")
             if (username == "") {
                 $('#username').addClass('border border-danger');
                 $('#username_error_message').html(message);
@@ -141,6 +142,9 @@ $(document).ready(function() {
                 $('#Phone_error_message').html(message);
             }
         } else if (Phone.length != 10 || !pattern.test($('#email').val())) {
+            console.log("test condition validation")
+            console.log(Phone.length != 10)
+            console.log(pattern.test($('#email').val()))
             if (Phone.length != 10) {
                 $('#Phone').addClass('border border-danger');
                 $('#Phone_error_message').html('กรุณากรอกหมายเลขโทรศัพท์ให้ครบ');
@@ -150,6 +154,7 @@ $(document).ready(function() {
                 $('#email_error_message').html('อีเมลไม่ถูกต้อง');
             }
         } else {
+            console.log("test ajax send")
             $.ajax({
                 type: 'POST',
                 url: 'query/register.php',
