@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var message = "กรุณาระบุข้อมูลให้ครบ";
     var phoneno = /^[0-9]*$/
+    var usernamecheck = /[^a-zA-Z0-9_]/
 
     $('#username').keyup(function() {
         if ($(this).val() == "") {
@@ -90,7 +91,6 @@ $(document).ready(function() {
 
     $('#submit_reg').click(function() {
         var pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
-        var usernamecheck = /[^a-zA-Z0-9_]/
         console.log("test")
         var username = $('#username').val();
         var password = $('#password').val();
@@ -100,8 +100,7 @@ $(document).ready(function() {
         var department = $('#department').val();
         var email = $('#email').val();
         var Phone = $('#Phone').val();
-        // password != confirmPassword ||
-        if (username == "" || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
+        if (username == "" || password != confirmPassword || password == "" || confirmPassword == "" || fullname == "" || idEmployee == "" || department == "" || email == "" || Phone == "") {
             console.log("test condition null")
             if (username == "") {
                 $('#username').addClass('border border-danger');
@@ -115,12 +114,12 @@ $(document).ready(function() {
                 $('#confirmPassword').addClass('border border-danger');
                 $('#confirm_password_error_message').html(message);
             }
-            // if (password != confirmPassword) {
-            //     $('#password').val('');
-            //     $('#confirmPassword').val('');
-            //     $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
-            //     $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
-            // }
+            if (password != confirmPassword) {
+                $('#password').val('');
+                $('#confirmPassword').val('');
+                $('#password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+                $('#confirm_password_error_message').html('กรุณาระบุรหัสผ่านให้ตรงกัน');
+            }
             if (fullname == "") {
                 $('#Fullname').addClass('border border-danger');
                 $('#fullname_error_message').html(message);
@@ -143,8 +142,6 @@ $(document).ready(function() {
             }
         } else if (Phone.length != 10 || !pattern.test($('#email').val())) {
             console.log("test condition validation")
-            console.log(Phone.length != 10)
-            console.log(pattern.test($('#email').val()))
             if (Phone.length != 10) {
                 $('#Phone').addClass('border border-danger');
                 $('#Phone_error_message').html('กรุณากรอกหมายเลขโทรศัพท์ให้ครบ');
