@@ -36,8 +36,8 @@ if($row['period_t']==0){
       /* box-shadow: 0 0 0 rgba(0,0,0,0.5); */
     }
     page[size="A4"] {  
-      width: 21cm;
-      height: 29.7cm; 
+      width: 22cm;
+      height: 28cm; 
     }
     page[size="A4"][layout="landscape"] {
       width: 29.7cm;

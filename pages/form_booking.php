@@ -44,7 +44,7 @@
                   <div class="col-6">
                     <div class="row col-12 text-center">
                       <b class="mb-4">รูปภาพ</b> </br>
-                        <img id="room_img" style="width: 700px; max-height: 500px">
+                        <img id="room_img" style="width: 700px">
                     </div>
                   </div>
 

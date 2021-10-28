@@ -6,6 +6,7 @@ $(document).ready(function() {
     var user_fullname = null;
     var room_name = null;
     var room_img = $('#room_img').val();
+    $('#nav_booking a').addClass('active');
 
     $.ajax({
         type: 'GET',

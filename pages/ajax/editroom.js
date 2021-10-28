@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var message = "กรุณาระบุข้อมูลให้ครบ";
     var room_id = $('#room_id').val();
+    $('#manage_room a').addClass('active');
+
     $.ajax({
         type: 'POST',
         url: 'query/showroomdetail.php',

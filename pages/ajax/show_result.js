@@ -2,6 +2,7 @@ $(document).ready(function() {
     var AM = "08:00 - 12:00 น.";
     var PM = "13:00 - 16:00 น.";
     var user_id = $('#user_id').val();
+    $('#form_result a').addClass('active');
     $.ajax({
         type: 'GET',
         url: 'query/resultbooking.php',
@@ -10,9 +11,7 @@ $(document).ready(function() {
         },
         success: function(data) {
             var new_data = JSON.parse(data).resultBookingObj;
-            console.log(new_data)
             if (data == "null") {
-
             } else {
                 new_data.forEach(((element, index) => {
                     $('#tablebody').append(`<tr>
@@ -29,8 +28,6 @@ $(document).ready(function() {
                     <a href="form_print.php?id=${element['id']}" target="_blank"><button class="btn btn-success">print</button></a>
                     </td>
                     </tr>`)
-                    console.log(element)
-                        // <input type="button" class="btn btn-success" onclick="window.print();" value="print">
                 }));
             }
         }

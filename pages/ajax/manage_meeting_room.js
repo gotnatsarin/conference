@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var idroom = null;
-    $('#manage_room').addClass(' active');
+    $('#manage_room a').addClass('active');
     const deleteThisRoom = () => {
         $('#mymodal').modal('hide')
         $.ajax({

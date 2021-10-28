@@ -3,8 +3,6 @@ $(document).ready(function() {
     console.log(room_id)
     var time = null;
     var idactive = null;
-    $('#nav_main').addClass(' active');
-
     $.ajax({
         type: 'GET',
         url: 'query/showroom.php',
@@ -14,20 +12,16 @@ $(document).ready(function() {
             console.log(new_data)
             new_data.forEach(((element, index) => {
                 $('#nav').append(`
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-dark" id="${element['room_id']}">
-                    <a class="nav-link text-dark text-end" href="main.php?room_id=${element['room_id']}">${element['room_name']}</a>
-                  </li>
-                </ul>
+
+                    <a class="list-group-item list-group-item-action list-group-item-dark text-end" id="${element['room_id']}" href="main.php?room_id=${element['room_id']}">${element['room_name']}</a>
                 `);
 
             }));
             try {
-                $(`li.active a.text-light`).removeClass('text-light')
-                $(`li.active`).removeClass('active')
-                $(`li#${room_id}`).addClass('active')
-                $(`li#${room_id} a`).removeClass('text-dark')
-                $(`li#${room_id} a`).addClass('text-light')
+
+                $(`a#${room_id}`).addClass('active')
+                $(`a#${room_id} a`).removeClass('text-dark')
+                $(`a#${room_id} a`).addClass('text-light')
             } catch {
 
             }

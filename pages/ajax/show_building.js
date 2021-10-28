@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var data_arr = "";
     var id_building = $('#id_building').val();
+    $('#nav_booking a').addClass('active');
 
     $.ajax({
         type: "GET",

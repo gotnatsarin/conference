@@ -1,6 +1,6 @@
 <?php require('query/checklogin.php'); ?>
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +57,7 @@
         
         <div class="row">
           <div class="col-8">
-          <img id="room_img"  style="width: 700px; max-height: 500px">
+          <img id="room_img" class="img-thumbnail" style="width: 700px;">
           </div>
           <div class="col-4">
 

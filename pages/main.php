@@ -9,8 +9,6 @@
   <?php require('mdb_css.php'); ?>
   <title>หน้าหลัก</title>
 </head>
-<style>
-</style>
 <body>
     <?php require('components/navbar.php'); ?>
     <input type="hidden" id="room_id" value="<?php echo $_GET['room_id']; ?>"></input>
@@ -27,11 +25,9 @@
               <form >
                 <div class="row">
                   <div class="col-3 text-center">
-                    <!-- navbar -->
-                    <div id="nav">
+                    <div class="list-group" id="nav">
 
                     </div>
-                    <!-- navbar -->
                   </div>
                   <div class="col-9">
                     <div class="card card-body border rounded">
@@ -60,6 +56,6 @@
           </div>
       </div>
 </body>
-<script src="ajax/add_room.js"></script>
+<!-- <script src="ajax/add_room.js"></script> -->
 <script src="ajax/showroom.js"></script>
 </html>

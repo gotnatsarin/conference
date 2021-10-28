@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var message = "กรุณาระบุข้อมูลให้ครบ";
+    $('#manage_room a').addClass('active');
 
     $('#addroom').click(function() {
         var roomname = $('#room_name').val();
