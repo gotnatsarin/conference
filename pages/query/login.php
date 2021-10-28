@@ -6,10 +6,6 @@
   $key = "newDEVsince2021";
   $hash_login_password = hash_hmac('sha256',$password,$key);
 
-
-
-
-
   $sql = "SELECT * FROM user WHERE username=? AND password=?";
   $stmt = mysqli_prepare($conn,$sql);
   mysqli_stmt_bind_param($stmt,"ss",$username, $password);
@@ -37,7 +33,7 @@
     }
   } else {
     $data = json_encode(array("status"=>'false',"id"=>null));
-  echo $data;
-  }
+      echo $data;
+    }
 
 ?>
