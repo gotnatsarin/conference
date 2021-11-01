@@ -43,7 +43,7 @@
                 <a class="nav-link"  href="form_booking_result.php">ผลการจอง</a>
               </li>
               <?php
-                if($s_login_isadmin==0){
+                if($s_login_isadmin == 0){
               ?>
               <li class="nav-item" id="manage_room">
                 <a class="nav-link"  href="form_manage_meeting_room.php">จัดการห้องประชุม</a>

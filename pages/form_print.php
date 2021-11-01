@@ -1,7 +1,11 @@
 <?php
+require('query/checklogin.php');
 require('query/connect.php');
+
+
 $id = $_GET['id'];
-$sql = "SELECT * FROM report_booking WHERE id = '$id'";
+
+$sql = "SELECT r.room_name,r.topic,r.booking_date,r.period_t,r.user_fullname, u.dep_name FROM report_booking r,user u WHERE r.id = '$id' AND u.id= '$session_login_id'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -69,6 +73,7 @@ if($row['period_t']==0){
                 <p><b>ใช้ประชุมในวันที่ :</b> <?php echo $row['booking_date']; ?></p>
                 <p><b >เวลา : </b> <?php echo $time; ?></p>
                 <p><b>ชื่อผู้จอง : </b><?php echo $row['user_fullname']; ?></p>
+                <p><b>แผนก : </b><?php echo $row['dep_name']; ?></p>
                 </div>
               </div>
               <div class="row">
@@ -90,9 +95,6 @@ if($row['period_t']==0){
       $(document).ready(function() {
         window.print()
         window.onafterprint = window.close;	
-        // $('#print').click(function() {
-        //   window.print()
-        // });
       });
     </script>
   </body>

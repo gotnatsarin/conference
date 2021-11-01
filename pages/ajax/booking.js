@@ -32,7 +32,7 @@ $(document).ready(function() {
                 user_fullname = $('#full_name').text()
                 $('#dep_name').text(new_datas[0].dep_name)
                 $('#phone').text(new_datas[0].phone)
-                $('#room_img').attr('src',`picture/${new_datas[0].room_img}`)
+                $('#room_img').attr('src', `picture/${new_datas[0].room_img}`)
             }
         }
     });

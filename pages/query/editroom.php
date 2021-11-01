@@ -10,7 +10,7 @@ $room_img = $_POST['room_img'];
 $room_place = "";
 $newname = null;
 
-if($room_building==0){
+if($room_building == 0){
   $room_place = "อาคารอำนวยการ";
 }else{
   $room_place = "อาคารเฉลิมพระเกียรติ";
